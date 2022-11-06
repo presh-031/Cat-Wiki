@@ -2,7 +2,11 @@ import catWikiLogo from "../assets/CatwikiLogo.svg";
 import { ImSearch } from "react-icons/im";
 import { HiOutlineArrowNarrowRight } from "react-icons/hi";
 
+import { useDropDown } from "../contexts/dropDown";
+
 const Hero = () => {
+  const [dropDown, actions] = useDropDown();
+
   return (
     <div>
       <div className="rounded-t-[4.2rem] border border-red-800 bg-hero-image-sm bg-cover bg-center  bg-no-repeat px-[2.9rem] py-[2.1rem] ">
@@ -16,6 +20,7 @@ const Hero = () => {
               type="text"
               placeholder="Search"
               className="w-[100%] border-none text-[1.2rem]  leading-[1.5rem] text-[#291507] placeholder-[#291507] outline-none"
+              onFocus={actions.setDropDown}
             />
             <ImSearch color="#291507" className="h-[1rem] w-[1rem] " />
           </div>
