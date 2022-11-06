@@ -5,7 +5,7 @@ import { HiOutlineArrowNarrowRight } from "react-icons/hi";
 const Hero = () => {
   return (
     <div>
-      <div className="border border-red-800 bg-hero-image-sm bg-cover bg-center  bg-no-repeat px-[2.9rem] py-[2.1rem] ">
+      <div className="rounded-t-[4.2rem] border border-red-800 bg-hero-image-sm bg-cover bg-center  bg-no-repeat px-[2.9rem] py-[2.1rem] ">
         <div className="text-[#fff]">
           <p className="mb-[.73rem] font-mystery-quest text-[1.4rem] font-normal leading-[1.911rem]">CatWiki</p>
           <p className="mb-[1.82rem] w-[13.92rem] font-montserrat text-[1rem] font-medium leading-[1.219rem]">
@@ -21,7 +21,7 @@ const Hero = () => {
           </div>
         </div>
       </div>
-      <div className=" bg-[#E3E1DC] px-[2.9rem] pb-[5.4rem] pt-[1.8rem]">
+      <div className="rounded-b-[4.2rem] bg-[#E3E1DC] px-[2.9rem] pb-[5.4rem] pt-[1.8rem]">
         <p className=" font-montserrat text-[1.2rem] leading-[1.5rem] text-[#291507] ">Most Searched Breeds</p>
         <div className="mt-[1rem] mb-[1.7rem] w-[4rem] rounded-[7.7rem] border-b-[3px] border-[#4D270C]"></div>
         <div className="">
