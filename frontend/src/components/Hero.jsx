@@ -21,20 +21,52 @@ const Hero = () => {
           </div>
         </div>
       </div>
-      <div className="px-[2.9rem] py-[1.8rem]">
-        <p>Most Searched Breeds</p>
-        <div></div>
-        <div>
-          <p>66+ Breeds For you to discover</p>
-          <p>
+      <div className=" bg-[#E3E1DC] px-[2.9rem] pb-[5.4rem] pt-[1.8rem]">
+        <p className=" font-montserrat text-[1.2rem] leading-[1.5rem] text-[#291507] ">Most Searched Breeds</p>
+        <div className="mt-[1rem] mb-[1.7rem] w-[4rem] rounded-[7.7rem] border-b-[3px] border-[#4D270C]"></div>
+        <div className="">
+          <p className="w-[18.5rem] font-montserrat text-[1.8rem] font-bold leading-[2.194rem] text-[#291507]">
+            66+ Breeds For you to discover
+          </p>
+          <p className="hidden">
             SEE MORE <HiOutlineArrowNarrowRight />{" "}
           </p>
         </div>
-        <div>
-          <div></div>
-          <div></div>
-          <div></div>
-          <div></div>
+        <div className="grid grid-cols-2 gap-[1.3rem] border border-red-800">
+          <div className="border border-red-800">
+            <img
+              src="https://cdn2.thecatapi.com/images/0XYvRd7oD.jpg"
+              alt=""
+              className="h-[13.477rem] w-[100%] object-cover"
+            />
+            <p className="mt-[1.2rem] font-montserrat text-[1.2rem] font-semibold leading-[1.463rem]">Abyssinian</p>
+          </div>
+          <div className="border border-red-800">
+            <img
+              src="https://cdn2.thecatapi.com/images/ozEvzdVM-.jpg"
+              alt=""
+              className="h-[13.477rem] w-[100%] object-cover"
+            />
+            <p className="mt-[1.2rem] font-montserrat text-[1.2rem] font-semibold leading-[1.463rem]">Aegean</p>
+          </div>
+          <div className="border border-red-800">
+            <img
+              src="https://cdn2.thecatapi.com/images/hBXicehMA.jpg"
+              alt=""
+              className="h-[13.477rem] w-[100%] object-cover"
+            />
+            <p className="mt-[1.2rem] font-montserrat text-[1.2rem] font-semibold leading-[1.463rem]">
+              American Bobtail
+            </p>
+          </div>
+          <div className="border border-red-800">
+            <img
+              src="https://cdn2.thecatapi.com/images/xnsqonbjW.jpg"
+              alt=""
+              className="h-[13.477rem] w-[100%] object-cover"
+            />
+            <p className="mt-[1.2rem] font-montserrat text-[1.2rem] font-semibold leading-[1.463rem]">American Curl</p>
+          </div>
         </div>
       </div>
     </div>
