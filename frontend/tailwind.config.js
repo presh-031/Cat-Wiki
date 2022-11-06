@@ -7,6 +7,11 @@ module.exports = {
         "mystery-quest": ["Mystery Quest", "cursive"],
         montserrat: ["Montserrat", "sans-serif"],
       },
+      backgroundImage: {
+        "hero-image-lg": "url('../src/assets/HeroImagelg.png')",
+        "hero-image-md": "url('../src/assets/HeroImagemd.png')",
+        "hero-image-sm": "url('../src/assets/HeroImagesm.png')",
+      },
     },
   },
   plugins: [],
