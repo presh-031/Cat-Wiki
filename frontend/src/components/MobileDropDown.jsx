@@ -1,7 +1,7 @@
 import { useDropDown } from "../contexts/dropDown";
 import { IoIosClose } from "react-icons/io";
 import { CgSearch } from "react-icons/cg";
-
+import { IconContext } from "react-icons";
 const MobileDropDown = () => {
   const [dropDown, actions] = useDropDown();
 
@@ -11,11 +11,13 @@ const MobileDropDown = () => {
       className="absolute top-0 right-0 left-0 border border border-red-200 border-black bg-white"
     >
       <div className="flex justify-end outline">
-        <div className="border border-red-800 ">
-          <IoIosClose size={"2"} className="h-[1.24rem] w-[1.318rem] border border-red-800 " />
+        <div className=" flex h-[4rem] w-[4rem] items-center justify-center rounded-[.8rem] bg-[#979797]  bg-opacity-10  ">
+          <IconContext.Provider value={{ style: { width: "2.318rem", height: "2.24rem" } }}>
+            <IoIosClose />
+          </IconContext.Provider>
         </div>
       </div>
-      <div>
+      <div className="outline">
         <input type="text" />
         <CgSearch />
       </div>
