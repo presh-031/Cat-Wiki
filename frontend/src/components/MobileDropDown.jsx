@@ -6,14 +6,14 @@ const MobileDropDown = () => {
   const [dropDown, actions] = useDropDown();
 
   return (
-    <div className="absolute top-0 right-0 left-0 bg-white px-[1.80rem]  pt-[.7rem]">
+    <div className="absolute top-0 right-0 left-0 bg-white px-[1.80rem] pb-[3.2rem]  pt-[.7rem]">
       <div className="flex justify-end">
         <div
           onClick={actions.setDropDown}
-          className=" flex h-[4rem] w-[4rem] items-center justify-center rounded-[.8rem] bg-[#979797]  bg-opacity-10  "
+          className=" flex h-[4rem] w-[4rem] cursor-pointer items-center justify-center rounded-[.8rem] bg-[#979797]  bg-opacity-10  "
         >
           <IconContext.Provider value={{ style: { width: "2.318rem", height: "2.24rem" } }}>
-            <IoIosClose />
+            <IoIosClose className="cursor-pointer" />
           </IconContext.Provider>
         </div>
       </div>
@@ -21,18 +21,18 @@ const MobileDropDown = () => {
         <input type="text" className=" w-[100%] outline-none " />
         <CgSearch className="" />
       </div>
-      <div className="px-[1.8rem]">
-        <div className="flex items-center p-[1.91rem]">
-          <p>American Bobtail</p>
+      <div className="">
+        <div className="flex cursor-pointer items-center rounded-[1.2rem]  p-[1.91rem] hover:bg-[#979797]  hover:bg-opacity-10">
+          <p className="font-montserrat text-[1.80rem]  font-medium leading-[2.194rem]">American Bobtail</p>
         </div>
-        <div className="flex items-center p-[1.91rem]">
-          <p>American Curl</p>
+        <div className="flex cursor-pointer items-center rounded-[1.2rem] p-[1.91rem] hover:bg-[#979797]  hover:bg-opacity-10">
+          <p className="font-montserrat text-[1.80rem]  font-medium leading-[2.194rem]">American Curl</p>
         </div>
-        <div className="flex items-center p-[1.91rem]">
-          <p>American Shorthair</p>
+        <div className="flex cursor-pointer items-center rounded-[1.2rem] p-[1.91rem] hover:bg-[#979797]  hover:bg-opacity-10">
+          <p className="font-montserrat text-[1.80rem]  font-medium leading-[2.194rem]">American Shorthair</p>
         </div>
-        <div className="flex items-center p-[1.91rem]">
-          <p>American Wirehair </p>
+        <div className="flex cursor-pointer items-center rounded-[1.2rem] p-[1.91rem] hover:bg-[#979797]  hover:bg-opacity-10">
+          <p className="font-montserrat text-[1.80rem]  font-medium leading-[2.194rem]">American Wirehair </p>
         </div>
       </div>
     </div>
