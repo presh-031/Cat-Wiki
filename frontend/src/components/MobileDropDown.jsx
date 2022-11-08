@@ -13,7 +13,7 @@ const MobileDropDown = ({ breeds }) => {
   // Controlling search input
   const [search, setSearch] = useState({
     query: "",
-    list: [],
+    list: breeds,
   });
 
   const handleInput = (e) => {
@@ -27,15 +27,26 @@ const MobileDropDown = ({ breeds }) => {
       query: e.target.value,
       list: results,
     });
+
+    if (e.target.value === "") {
+      actions.setDropDown();
+    }
   };
   // if (dropDown.isShowing) {
   //   console.log("dropdown mounted");
   //   console.log(breeds);
   // }
+  const showSuggestions = search.list.map((breed) => {
+    return (
+      <div className="flex cursor-pointer items-center rounded-[1.2rem] p-[1.91rem] hover:bg-[#979797]  hover:bg-opacity-10">
+        <p className="font-montserrat text-[1.80rem]  font-medium leading-[2.194rem]">{breed.name}</p>
+      </div>
+    );
+  });
   console.log(search.query, search.list);
 
   return (
-    <div className="absolute top-0 right-0 left-0 bg-white px-[1.80rem] pb-[3.2rem]  pt-[.7rem]">
+    <div className="absolute top-0 right-0 left-0 h-[41.2rem] overflow-y-auto bg-white px-[1.80rem] pb-[3.2rem]  pt-[.7rem]">
       <div className="flex justify-end">
         <div
           onClick={actions.setDropDown}
@@ -46,12 +57,12 @@ const MobileDropDown = ({ breeds }) => {
           </IconContext.Provider>
         </div>
       </div>
-      <div className="mt-[3rem] flex  items-center rounded-[5.9rem] border-[1px] border-black py-[1.175rem] px-[2rem] font-montserrat text-[1.80rem]  font-medium leading-[2.194rem]  ">
+      <div className="mt-[3rem] mb-[1.83rem] flex  items-center rounded-[5.9rem] border-[1px] border-black py-[1.175rem] px-[2rem] font-montserrat text-[1.80rem]  font-medium leading-[2.194rem]  ">
         <input type="text" value={search.query} onInput={handleInput} className=" w-[100%] outline-none " />
         <CgSearch className="" />
       </div>
       <div className="">
-        <div className="flex cursor-pointer items-center rounded-[1.2rem]  p-[1.91rem] hover:bg-[#979797]  hover:bg-opacity-10">
+        {/* <div className="flex cursor-pointer items-center rounded-[1.2rem] p-[1.91rem]  outline hover:bg-[#979797]  hover:bg-opacity-10">
           <p className="font-montserrat text-[1.80rem]  font-medium leading-[2.194rem]">American Bobtail</p>
         </div>
         <div className="flex cursor-pointer items-center rounded-[1.2rem] p-[1.91rem] hover:bg-[#979797]  hover:bg-opacity-10">
@@ -62,7 +73,8 @@ const MobileDropDown = ({ breeds }) => {
         </div>
         <div className="flex cursor-pointer items-center rounded-[1.2rem] p-[1.91rem] hover:bg-[#979797]  hover:bg-opacity-10">
           <p className="font-montserrat text-[1.80rem]  font-medium leading-[2.194rem]">American Wirehair </p>
-        </div>
+        </div> */}
+        {search.list.length ? showSuggestions : ""}
       </div>
     </div>
   );
