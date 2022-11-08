@@ -2,6 +2,7 @@ import { useDropDown } from "../contexts/dropDown";
 import { IoIosClose } from "react-icons/io";
 import { CgSearch } from "react-icons/cg";
 import { IconContext } from "react-icons";
+import { useState } from "react";
 
 // import fetchBreeds from "../api/fetchBreeds";
 // import { useQuery } from "react-query";
@@ -9,13 +10,30 @@ import { IconContext } from "react-icons";
 const MobileDropDown = ({ breeds }) => {
   const [dropDown, actions] = useDropDown();
 
-  // const { data, error, isError, isLoading } = useQuery("getBreeds", fetchBreeds);
+  // Controlling search input
+  const [search, setSearch] = useState({
+    query: "",
+    list: [],
+  });
 
-  console.log(breeds);
+  const handleInput = (e) => {
+    console.log(e.target.value);
 
-  if (dropDown.isShowing) {
-    console.log("dropdown mounted");
-  }
+    const results = breeds.filter((breed) => {
+      if (e.target.value === "") return breeds;
+      return breed.name.toLowerCase().includes(e.target.value.toLowerCase());
+    });
+    setSearch({
+      query: e.target.value,
+      list: results,
+    });
+  };
+  // if (dropDown.isShowing) {
+  //   console.log("dropdown mounted");
+  //   console.log(breeds);
+  // }
+  console.log(search.query, search.list);
+
   return (
     <div className="absolute top-0 right-0 left-0 bg-white px-[1.80rem] pb-[3.2rem]  pt-[.7rem]">
       <div className="flex justify-end">
@@ -29,7 +47,7 @@ const MobileDropDown = ({ breeds }) => {
         </div>
       </div>
       <div className="mt-[3rem] flex  items-center rounded-[5.9rem] border-[1px] border-black py-[1.175rem] px-[2rem] font-montserrat text-[1.80rem]  font-medium leading-[2.194rem]  ">
-        <input type="text" className=" w-[100%] outline-none " />
+        <input type="text" value={search.query} onInput={handleInput} className=" w-[100%] outline-none " />
         <CgSearch className="" />
       </div>
       <div className="">
