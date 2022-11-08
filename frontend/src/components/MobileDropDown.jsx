@@ -17,9 +17,9 @@ const MobileDropDown = () => {
           </IconContext.Provider>
         </div>
       </div>
-      <div className="mt-[3rem] flex items-center  outline">
-        <input type="text" className="w-[100%] outline" />
-        <CgSearch className="outline" />
+      <div className="mt-[3rem] flex  items-center rounded-[5.9rem] border-[1px] border-black py-[1.175rem] px-[2rem] font-montserrat text-[1.80rem]  font-medium leading-[2.194rem]  ">
+        <input type="text" className=" w-[100%] outline-none " />
+        <CgSearch className="" />
       </div>
       <div className="px-[1.8rem]">
         <div className="flex items-center p-[1.91rem]">
