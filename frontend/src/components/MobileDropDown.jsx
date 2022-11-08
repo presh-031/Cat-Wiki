@@ -6,20 +6,20 @@ const MobileDropDown = () => {
   const [dropDown, actions] = useDropDown();
 
   return (
-    <div
-      onClick={actions.setDropDown}
-      className="absolute top-0 right-0 left-0 border border border-red-200 border-black bg-white"
-    >
-      <div className="flex justify-end outline">
-        <div className=" flex h-[4rem] w-[4rem] items-center justify-center rounded-[.8rem] bg-[#979797]  bg-opacity-10  ">
+    <div className="absolute top-0 right-0 left-0 bg-white px-[1.80rem]  pt-[.7rem]">
+      <div className="flex justify-end">
+        <div
+          onClick={actions.setDropDown}
+          className=" flex h-[4rem] w-[4rem] items-center justify-center rounded-[.8rem] bg-[#979797]  bg-opacity-10  "
+        >
           <IconContext.Provider value={{ style: { width: "2.318rem", height: "2.24rem" } }}>
             <IoIosClose />
           </IconContext.Provider>
         </div>
       </div>
-      <div className="outline">
-        <input type="text" />
-        <CgSearch />
+      <div className="mt-[3rem] flex items-center  outline">
+        <input type="text" className="w-[100%] outline" />
+        <CgSearch className="outline" />
       </div>
       <div className="px-[1.8rem]">
         <div className="flex items-center p-[1.91rem]">
