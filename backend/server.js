@@ -2,6 +2,7 @@ const express = require("express");
 const app = express();
 
 require("dotenv").config();
+const fetch = (...args) => import("node-fetch").then(({ default: fetch }) => fetch(...args));
 
 // middleware
 
@@ -18,12 +19,14 @@ app.listen(port, () => {
 
 // routes
 app.get("/", async (req, res) => {
-  const response = await fetch("https://api.thecatapi.com/v1/breeds");
-  const data = await response.json();
-  console.log(data);
-  if (!data) {
+  try {
+    const response = await fetch("https://api.thecatapi.com/v1/breeds");
+    const data = await response.json();
+    console.log(data);
+
+    res.status(200).send(data);
+  } catch (err) {
+    console.log(err);
     // return res.status().json();
   }
-
-  res.status(200).send(data);
 });
