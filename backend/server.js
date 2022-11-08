@@ -17,8 +17,13 @@ app.listen(port, () => {
 });
 
 // routes
-app.get("/", (req, res) => {
-  res.status(200).send({
-    mssg: "welcome to the app",
-  });
+app.get("/", async (req, res) => {
+  const response = await fetch("https://api.thecatapi.com/v1/breeds");
+  const data = await response.json();
+  console.log(data);
+  if (!data) {
+    // return res.status().json();
+  }
+
+  res.status(200).send(data);
 });

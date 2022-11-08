@@ -9,11 +9,12 @@
     "dev": "nodemon server.js"
   },
   "keywords": [],
-  "author": "",
+  "author": "presh-031",
   "license": "ISC",
   "dependencies": {
     "dotenv": "^16.0.3",
     "express": "^4.18.2",
+    "node-fetch": "^3.2.10",
     "nodemon": "^2.0.20"
   }
 }
