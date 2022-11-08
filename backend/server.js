@@ -18,11 +18,10 @@ app.listen(port, () => {
 });
 
 // routes
-app.get("/", async (req, res) => {
+app.get("/api", async (req, res) => {
   try {
     const response = await fetch("https://api.thecatapi.com/v1/breeds");
     const data = await response.json();
-    console.log(data);
 
     res.status(200).send(data);
   } catch (err) {
