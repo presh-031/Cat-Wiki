@@ -2,9 +2,20 @@ import { useDropDown } from "../contexts/dropDown";
 import { IoIosClose } from "react-icons/io";
 import { CgSearch } from "react-icons/cg";
 import { IconContext } from "react-icons";
-const MobileDropDown = () => {
+
+// import fetchBreeds from "../api/fetchBreeds";
+// import { useQuery } from "react-query";
+
+const MobileDropDown = ({ breeds }) => {
   const [dropDown, actions] = useDropDown();
 
+  // const { data, error, isError, isLoading } = useQuery("getBreeds", fetchBreeds);
+
+  console.log(breeds);
+
+  if (dropDown.isShowing) {
+    console.log("dropdown mounted");
+  }
   return (
     <div className="absolute top-0 right-0 left-0 bg-white px-[1.80rem] pb-[3.2rem]  pt-[.7rem]">
       <div className="flex justify-end">

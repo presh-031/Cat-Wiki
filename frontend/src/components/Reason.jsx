@@ -21,16 +21,12 @@ const Reason = () => {
       </div>
       <div className="flex outline">
         <div className="flex flex-col justify-end outline">
-          <div>
-            <img src={image2} alt="" className="h-[10.90rem] w-[17.2rem]" />
-          </div>
+          <div>{/* <img src={image2} alt="" className="h-[10.90rem] w-[17.2rem]" /> */}</div>
           <div className="w-fit  outline">
-            <img src={image1} alt="" className="h-[18.443rem] w-[12.295rem]" />
+            {/* <img src={image1} alt="" className="h-[18.443rem] w-[12.295rem]" /> */}
           </div>
         </div>
-        <div>
-          <img src={image3} alt="" className="h-[24.96rem] w-[14.998rem]" />
-        </div>
+        <div>{/* <img src={image3} alt="" className="h-[24.96rem] w-[14.998rem]" /> */}</div>
       </div>
     </div>
   );

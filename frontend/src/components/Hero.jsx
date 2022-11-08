@@ -40,7 +40,7 @@ const Hero = () => {
         <div className="grid grid-cols-2 gap-[1.3rem] border border-red-800">
           <div className="border border-red-800">
             <img
-              src="https://cdn2.thecatapi.com/images/0XYvRd7oD.jpg"
+              // src="https://cdn2.thecatapi.com/images/0XYvRd7oD.jpg"
               alt=""
               className="h-[13.477rem] w-[100%] object-cover"
             />
@@ -48,7 +48,7 @@ const Hero = () => {
           </div>
           <div className="border border-red-800">
             <img
-              src="https://cdn2.thecatapi.com/images/ozEvzdVM-.jpg"
+              // src="https://cdn2.thecatapi.com/images/ozEvzdVM-.jpg"
               alt=""
               className="h-[13.477rem] w-[100%] object-cover"
             />
@@ -56,7 +56,7 @@ const Hero = () => {
           </div>
           <div className="border border-red-800">
             <img
-              src="https://cdn2.thecatapi.com/images/hBXicehMA.jpg"
+              // src="https://cdn2.thecatapi.com/images/hBXicehMA.jpg"
               alt=""
               className="h-[13.477rem] w-[100%] object-cover"
             />
@@ -66,7 +66,7 @@ const Hero = () => {
           </div>
           <div className="border border-red-800">
             <img
-              src="https://cdn2.thecatapi.com/images/xnsqonbjW.jpg"
+              // src="https://cdn2.thecatapi.com/images/xnsqonbjW.jpg"
               alt=""
               className="h-[13.477rem] w-[100%] object-cover"
             />
