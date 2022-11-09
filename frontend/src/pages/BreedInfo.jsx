@@ -9,11 +9,30 @@ import Footer from "../components/Footer";
 import { useNavigate } from "react-router-dom";
 
 const BreedInfo = () => {
+  const navigate = useNavigate();
+
   const [currentBreed, currentBreedActions] = useCurrentBreed();
   // const [allBreeds, allBreedsActions] = useAllBreeds();
   const breed = currentBreed.currentBreed;
 
-  const navigate = useNavigate();
+  const breedInfo = {
+    name: breed.name,
+    description: breed.description,
+    temperament: breed.temperament,
+    origin: breed.origin,
+    lifeSpan: breed.life_span,
+    numberedDetails: {
+      adaptability: breed.adaptability,
+      affectionLevel: breed.affection_level,
+      childFriendly: breed.child_friendly,
+      grooming: breed.grooming,
+      intelligence: breed.intelligence,
+      healthIssues: breed.health_issues,
+
+      socialNeeds: breed.social_needs,
+      strangerFriendly: breed.stranger_friendly,
+    },
+  };
 
   console.log(currentBreed);
   return (
@@ -27,8 +46,8 @@ const BreedInfo = () => {
       >
         Go back
       </button>
-      <BreedPhoto src={breed.image.url} />
-      <BreedDetail />
+      <BreedPhoto src={breed?.image?.url} />
+      <BreedDetail breedInfo={breedInfo} />
       <Footer />
     </div>
   );
