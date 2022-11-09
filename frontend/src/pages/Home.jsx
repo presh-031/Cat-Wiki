@@ -7,15 +7,29 @@ import Reason from "../components/Reason";
 import fetchBreeds from "../api/fetchBreeds";
 import { useQuery } from "react-query";
 
-import { useDropDown } from "../contexts/dropDown";
+import { useDropDown } from "../stores/dropDown";
+import { useAllBreeds } from "../stores/allbreeds";
+import BreedInfo from "./BreedInfo";
 
 const Home = () => {
   const [dropDown, actions] = useDropDown();
+  const [allBreeds, allBreedsActions] = useAllBreeds();
 
   const { data, error, isError, isLoading } = useQuery("getBreeds", fetchBreeds);
 
   // if isloading and if iserror, send those states to mobiledropdown and implement the ui within the component.
 
+  if (data) {
+    allBreedsActions.setAllBreeds(data);
+  }
+
+  if (isError) {
+    console.log(error);
+  }
+
+  if (isLoading) {
+    console.log("loading");
+  }
   console.count("homepage");
   // console.log(data);
   return (
@@ -25,6 +39,7 @@ const Home = () => {
       <Hero />
       <Reason />
       <Footer />
+      <BreedInfo />
     </div>
   );
 };

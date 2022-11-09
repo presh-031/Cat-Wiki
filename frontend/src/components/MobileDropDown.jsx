@@ -1,4 +1,3 @@
-import { useDropDown } from "../contexts/dropDown";
 import { IoIosClose } from "react-icons/io";
 import { CgSearch } from "react-icons/cg";
 import { IconContext } from "react-icons";
@@ -7,8 +6,12 @@ import { useState } from "react";
 // import fetchBreeds from "../api/fetchBreeds";
 // import { useQuery } from "react-query";
 
+import { useDropDown } from "../stores/dropDown";
+import { useCurrentBreed } from "../stores/breed";
+
 const MobileDropDown = ({ breeds }) => {
   const [dropDown, actions] = useDropDown();
+  const [currentBreed, currentBreedActions] = useCurrentBreed();
 
   // Controlling search input
   const [search, setSearch] = useState({
@@ -17,7 +20,7 @@ const MobileDropDown = ({ breeds }) => {
   });
 
   const handleInput = (e) => {
-    console.log(e.target.value);
+    // console.log(e.target.value);
 
     const results = breeds.filter((breed) => {
       if (e.target.value === "") return breeds;
@@ -31,14 +34,14 @@ const MobileDropDown = ({ breeds }) => {
     if (e.target.value === "") {
       actions.setDropDown();
     }
-    // if (results.length === 0){
-
-    // }
   };
 
   //Function to handle any breed click
   const handleClick = (breedName) => {
-    console.log(breedName);
+    // console.log(breedName);
+    currentBreedActions.setCurrentBreed(breedName);
+
+    // Navigate to breed-info page, and get client-side state from store.
   };
 
   const showSuggestions = search.list.map((breed) => {
@@ -53,7 +56,7 @@ const MobileDropDown = ({ breeds }) => {
       </div>
     );
   });
-  console.log(search.query, search.list);
+  // console.log(search.query, search.list);
 
   return (
     <div className="absolute top-0 right-0 left-0 h-[41.2rem] overflow-y-auto bg-white px-[1.80rem] pb-[3.2rem]  pt-[.7rem]">

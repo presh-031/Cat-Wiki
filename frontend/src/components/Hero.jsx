@@ -2,7 +2,7 @@ import catWikiLogo from "../assets/CatwikiLogo.svg";
 import { ImSearch } from "react-icons/im";
 import { HiOutlineArrowNarrowRight } from "react-icons/hi";
 
-import { useDropDown } from "../contexts/dropDown";
+import { useDropDown } from "../stores/dropDown";
 
 const Hero = () => {
   const [dropDown, actions] = useDropDown();
