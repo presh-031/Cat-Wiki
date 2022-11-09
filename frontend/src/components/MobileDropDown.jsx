@@ -32,13 +32,20 @@ const MobileDropDown = ({ breeds }) => {
       actions.setDropDown();
     }
   };
-  // if (dropDown.isShowing) {
-  //   console.log("dropdown mounted");
-  //   console.log(breeds);
-  // }
+
+  //Function to handle any breed click
+  const handleClick = (breedName) => {
+    console.log(breedName);
+  };
+
   const showSuggestions = search.list.map((breed) => {
     return (
-      <div className="flex cursor-pointer items-center rounded-[1.2rem] p-[1.91rem] hover:bg-[#979797]  hover:bg-opacity-10">
+      <div
+        onClick={() => {
+          handleClick(breed.name);
+        }}
+        className="flex cursor-pointer items-center rounded-[1.2rem] p-[1.91rem] hover:bg-[#979797]  hover:bg-opacity-10"
+      >
         <p className="font-montserrat text-[1.80rem]  font-medium leading-[2.194rem]">{breed.name}</p>
       </div>
     );
@@ -61,21 +68,7 @@ const MobileDropDown = ({ breeds }) => {
         <input type="text" value={search.query} onInput={handleInput} className=" w-[100%] outline-none " />
         <CgSearch className="" />
       </div>
-      <div className="">
-        {/* <div className="flex cursor-pointer items-center rounded-[1.2rem] p-[1.91rem]  outline hover:bg-[#979797]  hover:bg-opacity-10">
-          <p className="font-montserrat text-[1.80rem]  font-medium leading-[2.194rem]">American Bobtail</p>
-        </div>
-        <div className="flex cursor-pointer items-center rounded-[1.2rem] p-[1.91rem] hover:bg-[#979797]  hover:bg-opacity-10">
-          <p className="font-montserrat text-[1.80rem]  font-medium leading-[2.194rem]">American Curl</p>
-        </div>
-        <div className="flex cursor-pointer items-center rounded-[1.2rem] p-[1.91rem] hover:bg-[#979797]  hover:bg-opacity-10">
-          <p className="font-montserrat text-[1.80rem]  font-medium leading-[2.194rem]">American Shorthair</p>
-        </div>
-        <div className="flex cursor-pointer items-center rounded-[1.2rem] p-[1.91rem] hover:bg-[#979797]  hover:bg-opacity-10">
-          <p className="font-montserrat text-[1.80rem]  font-medium leading-[2.194rem]">American Wirehair </p>
-        </div> */}
-        {search.list.length ? showSuggestions : ""}
-      </div>
+      <div className="">{search.list.length ? showSuggestions : ""}</div>
     </div>
   );
 };

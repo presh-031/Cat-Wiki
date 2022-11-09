@@ -14,6 +14,8 @@ const Home = () => {
 
   const { data, error, isError, isLoading } = useQuery("getBreeds", fetchBreeds);
 
+  // if isloading and if iserror, send those states to mobiledropdown and implement the ui within the component.
+
   console.count("homepage");
   // console.log(data);
   return (
