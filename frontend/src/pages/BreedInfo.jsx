@@ -1,5 +1,5 @@
 import { useCurrentBreed } from "../stores/breed";
-import { useAllBreeds } from "../stores/allbreeds";
+// import { useAllBreeds } from "../stores/allbreeds";
 
 import Header from "../components/Header";
 import BreedPhoto from "../components/BreedPhoto";
@@ -10,14 +10,12 @@ import { useNavigate } from "react-router-dom";
 
 const BreedInfo = () => {
   const [currentBreed, currentBreedActions] = useCurrentBreed();
-  const [allBreeds, allBreedsActions] = useAllBreeds();
+  // const [allBreeds, allBreedsActions] = useAllBreeds();
+  const breed = currentBreed.currentBreed;
 
   const navigate = useNavigate();
 
-  // console.log(currentBreed);
-  // console.log(allBreeds);
-  console.count("info page");
-
+  console.log(currentBreed);
   return (
     <div>
       <Header />
@@ -29,7 +27,7 @@ const BreedInfo = () => {
       >
         Go back
       </button>
-      <BreedPhoto />
+      <BreedPhoto src={breed.image.url} />
       <BreedDetail />
       <Footer />
     </div>

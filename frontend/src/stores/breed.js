@@ -8,11 +8,11 @@ const Store = createStore({
   // actions that trigger store mutation
   actions: {
     setCurrentBreed:
-      (breedName) =>
+      (breed) =>
       ({ setState, getState }) => {
         // mutate state synchronously
         setState({
-          currentBreed: breedName,
+          currentBreed: breed,
         });
       },
   },

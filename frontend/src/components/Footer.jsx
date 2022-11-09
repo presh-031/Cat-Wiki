@@ -11,7 +11,7 @@ const Footer = () => {
           <a href="https://github.com/presh-031" className="font-bold underline">
             presh-031
           </a>{" "}
-          - devChallenge.io 2021
+          - devChallenge.io
         </p>
       </div>
     </footer>

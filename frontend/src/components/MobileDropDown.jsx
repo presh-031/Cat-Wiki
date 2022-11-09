@@ -40,9 +40,9 @@ const MobileDropDown = ({ breeds }) => {
   };
 
   //Function to handle any breed click
-  const handleClick = (breedName) => {
+  const handleClick = (breed) => {
     // console.log(breedName);
-    currentBreedActions.setCurrentBreed(breedName);
+    currentBreedActions.setCurrentBreed(breed);
 
     // Navigate to breed-info page.
     navigate("/breed-info");
@@ -52,7 +52,7 @@ const MobileDropDown = ({ breeds }) => {
     return (
       <div
         onClick={() => {
-          handleClick(breed.name);
+          handleClick(breed);
         }}
         className="flex cursor-pointer items-center rounded-[1.2rem] p-[1.91rem] hover:bg-[#979797]  hover:bg-opacity-10"
       >
