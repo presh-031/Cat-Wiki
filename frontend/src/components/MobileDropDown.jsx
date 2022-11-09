@@ -31,6 +31,9 @@ const MobileDropDown = ({ breeds }) => {
     if (e.target.value === "") {
       actions.setDropDown();
     }
+    // if (results.length === 0){
+
+    // }
   };
 
   //Function to handle any breed click
@@ -68,7 +71,15 @@ const MobileDropDown = ({ breeds }) => {
         <input type="text" value={search.query} onInput={handleInput} className=" w-[100%] outline-none " />
         <CgSearch className="" />
       </div>
-      <div className="">{search.list.length ? showSuggestions : ""}</div>
+      <div className="h-[100%] ">
+        {search.list.length ? (
+          showSuggestions
+        ) : (
+          <p className="mt-[10rem] text-center font-montserrat text-[1.8rem] font-semibold  leading-[2.194rem] ">
+            No result found
+          </p>
+        )}
+      </div>
     </div>
   );
 };
