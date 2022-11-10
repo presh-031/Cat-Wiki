@@ -22,7 +22,7 @@ const Home = () => {
   if (data) {
     allBreedsActions.setAllBreeds(data);
   }
-
+  console.log(data);
   if (isError) {
     console.log(error);
   }

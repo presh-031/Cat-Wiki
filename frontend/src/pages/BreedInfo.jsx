@@ -1,5 +1,5 @@
 import { useCurrentBreed } from "../stores/breed";
-// import { useAllBreeds } from "../stores/allbreeds";
+import { useDropDown } from "../stores/dropDown";
 
 import Header from "../components/Header";
 import BreedPhoto from "../components/BreedPhoto";
@@ -9,10 +9,11 @@ import Footer from "../components/Footer";
 import { useNavigate } from "react-router-dom";
 
 const BreedInfo = () => {
+  const [dropDown, dropDownActions] = useDropDown();
   const navigate = useNavigate();
 
   const [currentBreed, currentBreedActions] = useCurrentBreed();
-  // const [allBreeds, allBreedsActions] = useAllBreeds();
+
   const breed = currentBreed.currentBreed;
 
   const breedInfo = {
@@ -43,6 +44,7 @@ const BreedInfo = () => {
         <button
           className="font-montserrat text-[1.2rem] font-bold"
           onClick={() => {
+            dropDownActions.setDropDown(false);
             navigate(-1);
           }}
         >
