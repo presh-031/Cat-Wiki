@@ -1,6 +1,9 @@
 import Header from "../components/Header";
+import { useAllBreeds } from "../stores/allBreeds";
 
 const AllBreeds = () => {
+  const [allBreeds, allBreedsActions] = useAllBreeds();
+
   return (
     <div>
       <Header />
