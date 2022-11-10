@@ -22,6 +22,7 @@ const Home = () => {
   if (data) {
     allBreedsActions.setAllBreeds(data);
   }
+
   console.log(data);
   if (isError) {
     console.log(error);
@@ -36,7 +37,12 @@ const Home = () => {
     <div className="px-[1.8rem] pt-[2.343rem]">
       <Header />
       {dropDown.isShowing && <MobileDropDown breeds={data} />}
-      <Hero />
+      <Hero
+        breed1={data[Math.floor(Math.random() * data?.length)]}
+        breed2={data[Math.floor(Math.random() * data?.length)]}
+        breed3={data[Math.floor(Math.random() * data?.length)]}
+        breed4={data[Math.floor(Math.random() * data?.length)]}
+      />
       <Reason />
       <Footer />
     </div>

@@ -6,10 +6,12 @@ import { useNavigate } from "react-router-dom";
 
 import { useDropDown } from "../stores/dropDown";
 
-const Hero = () => {
+const Hero = ({ breed1, breed2, breed3, breed4 }) => {
   const [dropDown, actions] = useDropDown();
 
   const navigate = useNavigate();
+
+  console.log(breed1, breed2, breed3, breed4);
 
   return (
     <div>
