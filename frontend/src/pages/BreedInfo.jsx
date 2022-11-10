@@ -21,17 +21,17 @@ const BreedInfo = () => {
     temperament: breed.temperament,
     origin: breed.origin,
     lifeSpan: breed.life_span,
-    numberedDetails: {
-      adaptability: breed.adaptability,
-      affectionLevel: breed.affection_level,
-      childFriendly: breed.child_friendly,
-      grooming: breed.grooming,
-      intelligence: breed.intelligence,
-      healthIssues: breed.health_issues,
+    numberedDetails: [
+      ["Adaptability", breed.adaptability],
+      ["Affection level", breed.affection_level],
+      ["Child Friendly", breed.child_friendly],
+      ["Grooming", breed.grooming],
+      ["Intelligence", breed.intelligence],
+      ["Health issues", breed.health_issues],
 
-      socialNeeds: breed.social_needs,
-      strangerFriendly: breed.stranger_friendly,
-    },
+      ["Social needs", breed.social_needs],
+      ["Stranger friendly", breed.stranger_friendly],
+    ],
   };
 
   console.log(currentBreed);
