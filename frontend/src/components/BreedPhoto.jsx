@@ -1,7 +1,7 @@
 const BreedPhoto = ({ src }) => {
   return (
-    <div>
-      <img src={src} alt="breed-pic" />
+    <div className="h-[100%] outline">
+      <img src={src} alt="breed-pic" className="h-[100%] w-[100%]  object-cover" />
     </div>
   );
 };

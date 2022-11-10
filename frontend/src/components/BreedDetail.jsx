@@ -17,17 +17,17 @@ const BreedDetail = ({ breedInfo }) => {
   console.log("detail", data);
 
   return (
-    <div>
-      <p>{breedInfo.name}</p>
-      <p>{breedInfo.description}</p>
-      <p>
-        Temperament: <span>{breedInfo.temperament}.</span>
+    <div className="mt-[2rem] border border-red-800 p-[2rem] font-montserrat text-[#291507]">
+      <p className="mb-[2.5rem] text-[3.6rem] font-semibold leading-[4.388rem]">{breedInfo.name}</p>
+      <p className="mb-[3.275rem] text-[1.6rem] font-medium leading-[2.194rem]">{breedInfo.description}</p>
+      <p className="mb-[3.2rem] text-[1.6rem] font-bold leading-[1.95rem]">
+        Temperament: <span className="font-medium">{breedInfo.temperament}.</span>
       </p>
-      <p>
-        Origin: <span>{breedInfo.origin}</span>
+      <p className="mb-[3.2rem] text-[1.6rem] font-bold leading-[1.95rem]">
+        Origin: <span className="font-medium">{breedInfo.origin}</span>
       </p>
-      <p>
-        Life Span: <span> {breedInfo.lifeSpan} years </span>
+      <p className="mb-[3.2rem] text-[1.6rem] font-bold leading-[1.95rem]">
+        Life Span: <span className="font-medium"> {breedInfo.lifeSpan} years </span>
       </p>
       {breedInfo.numberedDetails.map((detail) => {
         // console.log(detail);

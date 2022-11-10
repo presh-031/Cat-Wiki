@@ -39,16 +39,22 @@ const BreedInfo = () => {
   return (
     <div>
       <Header />
-      <button
-        className="outline"
-        onClick={() => {
-          navigate(-1);
-        }}
-      >
-        Go back
-      </button>
-      <BreedPhoto src={breed?.image?.url} />
-      <BreedDetail breedInfo={breedInfo} />
+      <div className="flex justify-end p-[2rem] ">
+        <button
+          className="font-montserrat text-[1.2rem] font-bold"
+          onClick={() => {
+            navigate(-1);
+          }}
+        >
+          Go back
+        </button>
+      </div>
+      <div>
+        <div className="mx-auto h-[27.5rem] w-[27.5rem] overflow-hidden rounded-[2.4rem]">
+          <BreedPhoto src={breed?.image?.url} />
+        </div>
+        <BreedDetail breedInfo={breedInfo} />
+      </div>
       <Footer />
     </div>
   );
