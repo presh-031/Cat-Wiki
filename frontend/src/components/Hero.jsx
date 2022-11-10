@@ -9,7 +9,7 @@ const Hero = () => {
 
   return (
     <div>
-      <div className="rounded-t-[4.2rem] border border-red-800 bg-hero-image-sm bg-cover bg-center  bg-no-repeat px-[2.9rem] py-[2.1rem] ">
+      <div className="rounded-t-[4.2rem] border border-red-800 bg-black bg-hero-image-sm bg-cover bg-center  bg-no-repeat px-[2.9rem] py-[2.1rem] ">
         <div className="text-[#fff]">
           <p className="mb-[.73rem] font-mystery-quest text-[1.4rem] font-normal leading-[1.911rem]">CatWiki</p>
           <p className="mb-[1.82rem] w-[13.92rem] font-montserrat text-[1rem] font-medium leading-[1.219rem]">
@@ -33,8 +33,9 @@ const Hero = () => {
           <p className="w-[18.5rem] font-montserrat text-[1.8rem] font-bold leading-[2.194rem] text-[#291507]">
             66+ Breeds For you to discover
           </p>
-          <p className="hidden">
-            SEE MORE <HiOutlineArrowNarrowRight />{" "}
+          {/* Clicking this p should move to the all breeds page */}
+          <p className="my-[2rem] flex w-fit items-center gap-[.9rem] text-[1.2rem] font-bold leading-[2.194rem] text-[#7F736A]">
+            <span>SEE MORE</span> <HiOutlineArrowNarrowRight />{" "}
           </p>
         </div>
         <div className="grid grid-cols-2 gap-[1.3rem] border border-red-800">
