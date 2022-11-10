@@ -1,17 +1,21 @@
 import axios from "axios";
 
+import { useQuery } from "react-query";
+import BreedPhoto from "./BreedPhoto";
+
 import NumberedDetail from "./NumberedDetail";
 
 const BreedDetail = ({ breedInfo }) => {
-  console.log(breedInfo.numberedDetails);
-
   const showOtherPhotos = async () => {
-    for (let i = 0; i < 8; i++) {
-      const { data } = await axios.get("/api/photos/");
+    const { data } = await axios.get(`/api/photos/${breedInfo.id}`);
 
-      return data;
-    }
+    return data;
   };
+
+  const { data, error, isError, isLoading } = useQuery("getBreedPhotos", showOtherPhotos);
+
+  console.log("detail", data);
+
   return (
     <div>
       <p>{breedInfo.name}</p>
@@ -32,7 +36,9 @@ const BreedDetail = ({ breedInfo }) => {
 
       {/* Other Photos */}
       <p>Other Photos</p>
-      {}
+      {data?.map((breed) => {
+        return <BreedPhoto src={breed[0]?.url} />;
+      })}
     </div>
   );
 };

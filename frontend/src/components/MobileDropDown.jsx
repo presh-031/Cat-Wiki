@@ -41,14 +41,13 @@ const MobileDropDown = ({ breeds }) => {
 
   //Function to handle any breed click
   const handleClick = (breed) => {
-    // console.log(breedName);
     currentBreedActions.setCurrentBreed(breed);
 
     // Navigate to breed-info page.
     navigate("/breed-info");
   };
 
-  const showSuggestions = search.list.map((breed) => {
+  const showSuggestions = search?.list?.map((breed) => {
     return (
       <div
         onClick={() => {
@@ -79,7 +78,7 @@ const MobileDropDown = ({ breeds }) => {
         <CgSearch className="" />
       </div>
       <div className="h-[100%] ">
-        {search.list.length ? (
+        {search?.list?.length ? (
           showSuggestions
         ) : (
           <p className="mt-[10rem] text-center font-montserrat text-[1.8rem] font-semibold  leading-[2.194rem] ">

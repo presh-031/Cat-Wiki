@@ -32,6 +32,7 @@ const BreedInfo = () => {
       ["Social needs", breed.social_needs],
       ["Stranger friendly", breed.stranger_friendly],
     ],
+    id: breed.id,
   };
 
   console.log(currentBreed);

@@ -34,7 +34,6 @@ const Home = () => {
       <Hero />
       <Reason />
       <Footer />
-      <BreedInfo />
     </div>
   );
 };
