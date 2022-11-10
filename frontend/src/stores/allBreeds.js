@@ -7,12 +7,12 @@ const Store = createStore({
   },
   // actions that trigger store mutation
   actions: {
-    setCurrentBreed:
+    setAllBreeds:
       (allBreeds) =>
       ({ setState, getState }) => {
         // mutate state synchronously
         setState({
-          currentBreed: allBreeds,
+          allBreeds: allBreeds,
         });
       },
   },
@@ -20,4 +20,4 @@ const Store = createStore({
   name: "all-breeds",
 });
 
-export const useCurrentBreed = createHook(Store);
+export const useAllBreeds = createHook(Store);
