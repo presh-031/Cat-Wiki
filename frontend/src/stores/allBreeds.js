@@ -3,21 +3,21 @@ import { createStore, createHook } from "react-sweet-state";
 const Store = createStore({
   // value of the store on initialisation
   initialState: {
-    currentBreed: [],
+    allBreeds: [],
   },
   // actions that trigger store mutation
   actions: {
     setCurrentBreed:
-      (breed) =>
+      (allBreeds) =>
       ({ setState, getState }) => {
         // mutate state synchronously
         setState({
-          currentBreed: breed,
+          currentBreed: allBreeds,
         });
       },
   },
   // optional, mostly used for easy debugging
-  name: "current-breed",
+  name: "all-breeds",
 });
 
 export const useCurrentBreed = createHook(Store);

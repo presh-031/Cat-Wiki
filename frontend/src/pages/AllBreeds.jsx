@@ -4,6 +4,7 @@ const AllBreeds = () => {
   return (
     <div>
       <Header />
+
       <p>66+ Breeds For you to discover.</p>
     </div>
   );

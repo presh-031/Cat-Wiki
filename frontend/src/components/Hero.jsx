@@ -2,10 +2,14 @@ import catWikiLogo from "../assets/CatwikiLogo.svg";
 import { ImSearch } from "react-icons/im";
 import { HiOutlineArrowNarrowRight } from "react-icons/hi";
 
+import { useNavigate } from "react-router-dom";
+
 import { useDropDown } from "../stores/dropDown";
 
 const Hero = () => {
   const [dropDown, actions] = useDropDown();
+
+  const navigate = useNavigate();
 
   return (
     <div>
@@ -34,7 +38,12 @@ const Hero = () => {
             66+ Breeds For you to discover
           </p>
           {/* Clicking this p should move to the all breeds page */}
-          <p className="my-[2rem] flex w-fit items-center gap-[.9rem] text-[1.2rem] font-bold leading-[2.194rem] text-[#7F736A]">
+          <p
+            onClick={() => {
+              navigate("/allbreeds");
+            }}
+            className="my-[2rem] flex w-fit items-center gap-[.9rem] text-[1.2rem] font-bold leading-[2.194rem] text-[#7F736A]"
+          >
             <span>SEE MORE</span> <HiOutlineArrowNarrowRight />{" "}
           </p>
         </div>
