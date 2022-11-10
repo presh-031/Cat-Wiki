@@ -50,7 +50,7 @@ const BreedInfo = () => {
         </button>
       </div>
       <div>
-        <div className="mx-auto h-[27.5rem] w-[27.5rem] overflow-hidden rounded-[2.4rem]">
+        <div className="mx-auto h-[30.5rem] w-[30.5rem] overflow-hidden rounded-[2.4rem]">
           <BreedPhoto src={breed?.image?.url} />
         </div>
         <BreedDetail breedInfo={breedInfo} />

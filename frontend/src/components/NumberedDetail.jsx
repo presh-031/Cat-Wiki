@@ -12,9 +12,9 @@ const NumberedDetail = ({ title, value }) => {
     );
   };
   return (
-    <div>
-      <span>{title}:</span>
-      <div>{numberToTiles(value)}</div>
+    <div className="mb-[3.2rem] flex">
+      <span className="block w-[15rem] text-[1.6rem] font-bold leading-[1.95rem]">{title}:</span>
+      <div className="">{numberToTiles(value)}</div>
     </div>
   );
 };
