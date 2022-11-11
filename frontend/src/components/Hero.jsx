@@ -5,6 +5,7 @@ import { HiOutlineArrowNarrowRight } from "react-icons/hi";
 import { useNavigate } from "react-router-dom";
 
 import { useDropDown } from "../stores/dropDown";
+import BreedPhoto from "./BreedPhoto";
 
 const Hero = ({ breed1, breed2, breed3, breed4 }) => {
   const [dropDown, actions] = useDropDown();
@@ -50,39 +51,34 @@ const Hero = ({ breed1, breed2, breed3, breed4 }) => {
           </p>
         </div>
         <div className="grid grid-cols-2 gap-[1.3rem] border border-red-800">
-          <div className="border border-red-800">
-            <img
+          <div className="">
+            {/* <img
               src="https://cdn2.thecatapi.com/images/0XYvRd7oD.jpg"
               alt=""
               className="h-[13.477rem] w-[100%] object-cover"
-            />
-            <p className="mt-[1.2rem] font-montserrat text-[1.2rem] font-semibold leading-[1.463rem]">Abyssinian</p>
+            /> */}
+            <div className="h-[13.477rem] w-[100%]">
+              <BreedPhoto src={breed1?.image.url} />
+            </div>
+            <p className="mt-[1.2rem] font-montserrat text-[1.2rem] font-semibold leading-[1.463rem]">{breed1?.name}</p>
           </div>
-          <div className="border border-red-800">
-            <img
-              src="https://cdn2.thecatapi.com/images/ozEvzdVM-.jpg"
-              alt=""
-              className="h-[13.477rem] w-[100%] object-cover"
-            />
-            <p className="mt-[1.2rem] font-montserrat text-[1.2rem] font-semibold leading-[1.463rem]">Aegean</p>
+          <div className="">
+            <div className="h-[13.477rem] w-[100%]">
+              <BreedPhoto src={breed2?.image.url} />
+            </div>
+            <p className="mt-[1.2rem] font-montserrat text-[1.2rem] font-semibold leading-[1.463rem]">{breed2?.name}</p>{" "}
           </div>
-          <div className="border border-red-800">
-            <img
-              src="https://cdn2.thecatapi.com/images/hBXicehMA.jpg"
-              alt=""
-              className="h-[13.477rem] w-[100%] object-cover"
-            />
-            <p className="mt-[1.2rem] font-montserrat text-[1.2rem] font-semibold leading-[1.463rem]">
-              American Bobtail
-            </p>
+          <div className="">
+            <div className="h-[13.477rem] w-[100%]">
+              <BreedPhoto src={breed3?.image.url} />
+            </div>
+            <p className="mt-[1.2rem] font-montserrat text-[1.2rem] font-semibold leading-[1.463rem]">{breed3?.name}</p>
           </div>
-          <div className="border border-red-800">
-            <img
-              src="https://cdn2.thecatapi.com/images/xnsqonbjW.jpg"
-              alt=""
-              className="h-[13.477rem] w-[100%] object-cover"
-            />
-            <p className="mt-[1.2rem] font-montserrat text-[1.2rem] font-semibold leading-[1.463rem]">American Curl</p>
+          <div className="">
+            <div className="h-[13.477rem] w-[100%]">
+              <BreedPhoto src={breed4?.image.url} />
+            </div>
+            <p className="mt-[1.2rem] font-montserrat text-[1.2rem] font-semibold leading-[1.463rem]">{breed4?.name}</p>{" "}
           </div>
         </div>
       </div>

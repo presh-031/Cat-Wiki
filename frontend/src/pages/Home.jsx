@@ -38,10 +38,10 @@ const Home = () => {
       <Header />
       {dropDown.isShowing && <MobileDropDown breeds={data} />}
       <Hero
-        breed1={data[Math.floor(Math.random() * data?.length)]}
-        breed2={data[Math.floor(Math.random() * data?.length)]}
-        breed3={data[Math.floor(Math.random() * data?.length)]}
-        breed4={data[Math.floor(Math.random() * data?.length)]}
+        breed1={data ? data[Math.floor(Math.random() * data?.length)] : null}
+        breed2={data ? data[Math.floor(Math.random() * data?.length)] : null}
+        breed3={data ? data[Math.floor(Math.random() * data?.length)] : null}
+        breed4={data ? data[Math.floor(Math.random() * data?.length)] : null}
       />
       <Reason />
       <Footer />

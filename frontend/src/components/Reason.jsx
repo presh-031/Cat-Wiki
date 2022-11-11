@@ -6,7 +6,7 @@ import image3 from "../assets/image 3.png";
 const Reason = () => {
   return (
     <div className="mt-[6.372rem]  ">
-      <div className="mb-[6.372rem] outline">
+      <div className="mb-[6.372rem] ">
         <div className="mn-[1.624rem] w-[5rem] rounded-[7.7rem] border-b-[3px] border-[#4D270C]"></div>
         <p className="mb-[4.284rem] w-[32.5rem] font-montserrat text-[4rem] font-bold leading-[4.876rem] text-[#291507]">
           Why should you have a cat?
@@ -24,14 +24,18 @@ const Reason = () => {
           READ MORE <HiOutlineArrowNarrowRight />
         </a>
       </div>
-      <div className="flex outline">
-        <div className="flex flex-col justify-end outline">
-          <div>{/* <img src={image2} alt="" className="h-[10.90rem] w-[17.2rem]" /> */}</div>
-          <div className="w-fit  outline">
-            {/* <img src={image1} alt="" className="h-[18.443rem] w-[12.295rem]" /> */}
+      <div className="grid grid-cols-2">
+        <div className="flex flex-col gap-[1.798rem] ">
+          <div>
+            <img src={image2} alt="" className="h-[10.90rem] w-[17.2rem]" />
+          </div>
+          <div className="w-fit self-end   ">
+            <img src={image1} alt="" className="h-[18.443rem] w-[12.295rem]" />
           </div>
         </div>
-        <div>{/* <img src={image3} alt="" className="h-[24.96rem] w-[14.998rem]" /> */}</div>
+        <div className="flex justify-end">
+          <img src={image3} alt="" className="h-[24.96rem] w-[14.998rem]" />
+        </div>
       </div>
     </div>
   );
