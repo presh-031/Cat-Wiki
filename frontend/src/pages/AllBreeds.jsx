@@ -40,6 +40,7 @@ const AllBreeds = () => {
               onClick={() => {
                 handleBreedClick(breed);
               }}
+              key={breed.id}
             >
               <div className="h-[27.5rem] w-[27.5rem] overflow-hidden rounded-[2.4rem]">
                 <BreedPhoto src={breed?.image?.url} />

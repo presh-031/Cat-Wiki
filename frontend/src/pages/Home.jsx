@@ -32,17 +32,11 @@ const Home = () => {
     console.log("loading");
   }
   console.count("homepage");
-  // console.log(data);
   return (
     <div className="px-[1.8rem] pt-[2.343rem]">
       <Header />
       {dropDown.isShowing && <MobileDropDown breeds={data} />}
-      <Hero
-        breed1={data ? data[Math.floor(Math.random() * data?.length)] : null}
-        breed2={data ? data[Math.floor(Math.random() * data?.length)] : null}
-        breed3={data ? data[Math.floor(Math.random() * data?.length)] : null}
-        breed4={data ? data[Math.floor(Math.random() * data?.length)] : null}
-      />
+      <Hero />
       <Reason />
       <Footer />
     </div>

@@ -13,7 +13,7 @@ const Reason = () => {
         </p>
         <p className="mb-[2.685rem] font-montserrat text-[1.80rem] font-medium leading-[2.194rem] text-[#291507]">
           Having a cat around you can actually trigger the release of calming chemicals in your body which lower your
-          stress and anxiety levels
+          stress and anxiety levels.
         </p>
         <a
           href="https://www.helpguide.org/articles/healthy-living/joys-of-owning-a-cat.htm"

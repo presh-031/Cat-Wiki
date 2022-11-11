@@ -23,8 +23,6 @@ const MobileDropDown = ({ breeds }) => {
   });
 
   const handleInput = (e) => {
-    // console.log(e.target.value);
-
     const results = breeds.filter((breed) => {
       if (e.target.value === "") return breeds;
       return breed.name.toLowerCase().includes(e.target.value.toLowerCase());
@@ -53,6 +51,7 @@ const MobileDropDown = ({ breeds }) => {
         onClick={() => {
           handleClick(breed);
         }}
+        key={breed.id}
         className="flex cursor-pointer items-center rounded-[1.2rem] p-[1.91rem] hover:bg-[#979797]  hover:bg-opacity-10"
       >
         <p className="font-montserrat text-[1.80rem]  font-medium leading-[2.194rem]">{breed.name}</p>

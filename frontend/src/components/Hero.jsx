@@ -1,4 +1,10 @@
 import catWikiLogo from "../assets/CatwikiLogo.svg";
+
+import abob from "../assets/abob.jpg";
+import abys from "../assets/abys.jpg";
+import acur from "../assets/acur.jpg";
+import aege from "../assets/aege.jpg";
+
 import { ImSearch } from "react-icons/im";
 import { HiOutlineArrowNarrowRight } from "react-icons/hi";
 
@@ -7,12 +13,10 @@ import { useNavigate } from "react-router-dom";
 import { useDropDown } from "../stores/dropDown";
 import BreedPhoto from "./BreedPhoto";
 
-const Hero = ({ breed1, breed2, breed3, breed4 }) => {
-  const [dropDown, actions] = useDropDown();
+const Hero = () => {
+  const [dropDown, dropDownActions] = useDropDown();
 
   const navigate = useNavigate();
-
-  console.log(breed1, breed2, breed3, breed4);
 
   return (
     <div>
@@ -27,7 +31,7 @@ const Hero = ({ breed1, breed2, breed3, breed4 }) => {
               type="text"
               placeholder="Search"
               className="w-[100%] border-none text-[1.2rem]  leading-[1.5rem] text-[#291507] placeholder-[#291507] outline-none"
-              onFocus={actions.setDropDown}
+              onFocus={dropDownActions.setDropDown}
             />
             <ImSearch color="#291507" className="h-[1rem] w-[1rem] " />
           </div>
@@ -50,35 +54,32 @@ const Hero = ({ breed1, breed2, breed3, breed4 }) => {
             <span>SEE MORE</span> <HiOutlineArrowNarrowRight />{" "}
           </p>
         </div>
-        <div className="grid grid-cols-2 gap-[1.3rem] border border-red-800">
+        <div className="grid grid-cols-2 gap-[1.3rem]">
           <div className="">
-            {/* <img
-              src="https://cdn2.thecatapi.com/images/0XYvRd7oD.jpg"
-              alt=""
-              className="h-[13.477rem] w-[100%] object-cover"
-            /> */}
-            <div className="h-[13.477rem] w-[100%]">
-              <BreedPhoto src={breed1?.image.url} />
+            <div className="h-[13.477rem] w-[100%] overflow-hidden">
+              <BreedPhoto src={abys} />
             </div>
-            <p className="mt-[1.2rem] font-montserrat text-[1.2rem] font-semibold leading-[1.463rem]">{breed1?.name}</p>
+            <p className="mt-[1.2rem] font-montserrat text-[1.2rem] font-semibold leading-[1.463rem]">Abyssinian</p>
           </div>
           <div className="">
-            <div className="h-[13.477rem] w-[100%]">
-              <BreedPhoto src={breed2?.image.url} />
+            <div className="h-[13.477rem] w-[100%] overflow-hidden">
+              <BreedPhoto src={aege} />
             </div>
-            <p className="mt-[1.2rem] font-montserrat text-[1.2rem] font-semibold leading-[1.463rem]">{breed2?.name}</p>{" "}
+            <p className="mt-[1.2rem] font-montserrat text-[1.2rem] font-semibold leading-[1.463rem]">Aegean</p>{" "}
           </div>
           <div className="">
-            <div className="h-[13.477rem] w-[100%]">
-              <BreedPhoto src={breed3?.image.url} />
+            <div className="h-[13.477rem] w-[100%] overflow-hidden">
+              <BreedPhoto src={abob} />
             </div>
-            <p className="mt-[1.2rem] font-montserrat text-[1.2rem] font-semibold leading-[1.463rem]">{breed3?.name}</p>
+            <p className="mt-[1.2rem] font-montserrat text-[1.2rem] font-semibold leading-[1.463rem]">
+              American Bobtail
+            </p>
           </div>
           <div className="">
-            <div className="h-[13.477rem] w-[100%]">
-              <BreedPhoto src={breed4?.image.url} />
+            <div className="h-[13.477rem] w-[100%] overflow-hidden">
+              <BreedPhoto src={acur} />
             </div>
-            <p className="mt-[1.2rem] font-montserrat text-[1.2rem] font-semibold leading-[1.463rem]">{breed4?.name}</p>{" "}
+            <p className="mt-[1.2rem] font-montserrat text-[1.2rem] font-semibold leading-[1.463rem]">American Curl</p>{" "}
           </div>
         </div>
       </div>
