@@ -5,7 +5,7 @@ import BreedPhoto from "./BreedPhoto";
 
 import NumberedDetail from "./NumberedDetail";
 
-const BreedDetail = ({ breedInfo }) => {
+const BreedDetail = ({ breedInfo, name }) => {
   const showOtherPhotos = async () => {
     const { data } = await axios.get(`/api/photos/${breedInfo.id}`);
 
@@ -41,7 +41,7 @@ const BreedDetail = ({ breedInfo }) => {
         {data?.map((breed) => {
           return (
             <div className="mx-auto h-[27.5rem] w-[27.5rem] overflow-hidden rounded-[2.4rem] ">
-              <BreedPhoto src={breed[0]?.url} />
+              <BreedPhoto src={breed[0]?.url} name={name} />
             </div>
           );
         })}
